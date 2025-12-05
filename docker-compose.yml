@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      # This maps your local files into the container, so changes are reflected immediately
+      # and data like users.json persists between container restarts.
+      - .:/var/www/html
+    environment:
+      # Set your bot token here for local testing
+      - BOT_TOKEN=YOUR_LOCAL_BOT_TOKEN
+      - BOT_USERNAME=YOUR_BOT_USERNAME
