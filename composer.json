@@ -1,0 +1,13 @@
+{
+    "name": "your-vendor/telegram-earning-bot",
+    "description": "A simple Telegram earning bot.",
+    "type": "project",
+    "require": {
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
